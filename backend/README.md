@@ -1,8 +1,13 @@
-python3 -m venv <your_env_name>
+## Install
+```
+python3 -m venv env
+pip3 install -r requirements
+python3 run.py
+```
 
-
-
-/your_project/
+## Backend Folder Structures
+```
+/backend/
 │── /app/                  # Main application package
 │   │── /api/              # API-related modules
 │   │   │── __init__.py
@@ -42,14 +47,4 @@ python3 -m venv <your_env_name>
 │── requirements.txt       # Python dependencies
 │── run.py                 # Script to start the app
 │── README.md              # Project documentation
-
-
-
-python
->>> from app import create_app
->>> from app.extensions.database import db
->>> app = create_app()
->>> with app.app_context():
-...     db.create_all()
-... 
->>> exit()
+```

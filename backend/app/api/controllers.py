@@ -12,25 +12,25 @@ def find_cars(request_data):
     end_date = request_data.get("end_date")
     end_time = request_data.get("end_time")
 
-    cars = get_available_cars(pickup_location, dropoff_location)
+    car_list = get_available_cars(pickup_location, dropoff_location)
 
-    car_list = [
-        {
-            "id": car.id,
-            "brand": car.brand,
-            "model": car.model,
-            "year": car.year,
-            "type": car.type,
-            "seats": car.seats,
-            "transmission": car.transmission,
-            "fuel_type": car.fuel_type,
-            "price_per_day": car.price_per_day,
-            "pickup_location": car.pickup_location,
-            "dropoff_location": car.dropoff_location,
-            "availability": car.availability,
-            "image_url": car.image_url
-        } for car in cars
-    ]
+    # car_list = [
+    #     {
+    #         "id": car.id,
+    #         "brand": car.brand,
+    #         "model": car.model,
+    #         "year": car.year,
+    #         "type": car.type,
+    #         "seats": car.seats,
+    #         "transmission": car.transmission,
+    #         "fuel_type": car.fuel_type,
+    #         "price_per_day": car.price_per_day,
+    #         "pickup_location": car.pickup_location,
+    #         "dropoff_location": car.dropoff_location,
+    #         "availability": car.availability,
+    #         "image_url": car.image_url
+    #     } for car in cars
+    # ]
 
     response = {
         "cars": car_list,
