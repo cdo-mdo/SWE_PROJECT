@@ -1,8 +1,29 @@
-python3 -m venv <your_env_name>
+## Set Up a Virtual Environment
+```
+python3 -m venv venv
+source venv/bin/activate   # On macOS/Linux
+venv\Scripts\activate      # On Windows
+```
+
+## Install Dependencies
+```
+pip3 install -r requirements.txt
+```
+
+## Run the Setup Script
+```
+./setup_env.sh
+```
+
+## Running the API
+```
+python3 run.py
+```
 
 
-
-/your_project/
+## Backend Folder Structures
+```
+/backend/
 │── /app/                  # Main application package
 │   │── /api/              # API-related modules
 │   │   │── __init__.py
@@ -41,15 +62,6 @@ python3 -m venv <your_env_name>
 │── .env                   # Environment variables
 │── requirements.txt       # Python dependencies
 │── run.py                 # Script to start the app
+│── seed.py                # Add data
 │── README.md              # Project documentation
-
-
-
-python
->>> from app import create_app
->>> from app.extensions.database import db
->>> app = create_app()
->>> with app.app_context():
-...     db.create_all()
-... 
->>> exit()
+```
