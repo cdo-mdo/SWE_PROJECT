@@ -1,0 +1,166 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.1.0">
+  <diagram name="Page-1" id="_oPkuLZMvCNJyer4ET7P">
+    <mxGraphModel dx="1290" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TxC89kSDvtIA5IcEihC5-1" value="Sequence Diagram: Select Car to reserve" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="140" y="40" width="820" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-2" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Customer&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="20" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-3" value="Reservation UI&lt;div&gt;(Frontend)&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="100" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-11" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="TxC89kSDvtIA5IcEihC5-3">
+          <mxGeometry x="45" y="80" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-4" value="ReservationService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="120" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-13" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="TxC89kSDvtIA5IcEihC5-4">
+          <mxGeometry x="55" y="100" width="10" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-34" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="TxC89kSDvtIA5IcEihC5-4">
+          <mxGeometry x="55" y="380" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-5" value="CarRepository" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="460" y="120" width="120" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-16" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="TxC89kSDvtIA5IcEihC5-5">
+          <mxGeometry x="55" y="120" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-6" value="Reservation" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="640" y="120" width="120" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-20" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="TxC89kSDvtIA5IcEihC5-6">
+          <mxGeometry x="55" y="200" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-7" value="PaymentService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="810" y="120" width="120" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-24" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="TxC89kSDvtIA5IcEihC5-7">
+          <mxGeometry x="55" y="280" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-29" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="TxC89kSDvtIA5IcEihC5-7">
+          <mxGeometry x="55" y="360" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-8" value="PaymentAPI&amp;nbsp;&lt;div&gt;(External)&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="960" y="120" width="120" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-9" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="50" y="210" as="sourcePoint" />
+            <mxPoint x="170" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-10" value="select car" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-9">
+          <mxGeometry x="-0.44" y="-1" relative="1" as="geometry">
+            <mxPoint x="9" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-12" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" source="TxC89kSDvtIA5IcEihC5-11" target="TxC89kSDvtIA5IcEihC5-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="180" y="240" as="sourcePoint" />
+            <mxPoint x="330" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-14" value="request reservation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-12">
+          <mxGeometry x="-0.5075" relative="1" as="geometry">
+            <mxPoint x="26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-15" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="345" y="257" as="sourcePoint" />
+            <mxPoint x="515" y="257" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-17" value="check car availability" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-15">
+          <mxGeometry x="-0.583" y="1" relative="1" as="geometry">
+            <mxPoint x="26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-18" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="302" as="sourcePoint" />
+            <mxPoint x="340" y="302" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-19" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" source="TxC89kSDvtIA5IcEihC5-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="360" y="350" as="sourcePoint" />
+            <mxPoint x="700" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-21" value="create reservation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-19">
+          <mxGeometry x="-0.5471" y="-1" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-22" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="379" as="sourcePoint" />
+            <mxPoint x="339.5" y="379" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-23" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="345" y="419" as="sourcePoint" />
+            <mxPoint x="865" y="419" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-25" value="initial payment" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-23">
+          <mxGeometry x="-0.7177" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-26" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="880" y="440" as="sourcePoint" />
+            <mxPoint x="1020" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-27" value="process payment" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-26">
+          <mxGeometry x="-0.6086" y="-1" relative="1" as="geometry">
+            <mxPoint x="26" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-28" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" target="TxC89kSDvtIA5IcEihC5-29">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1020" y="500" as="sourcePoint" />
+            <mxPoint x="890" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-30" value="confirm payment" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-28">
+          <mxGeometry x="0.3324" y="-4" relative="1" as="geometry">
+            <mxPoint x="16" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-32" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" target="TxC89kSDvtIA5IcEihC5-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="865" y="520" as="sourcePoint" />
+            <mxPoint x="720" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-33" value="update reservation status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-32">
+          <mxGeometry x="0.3324" y="-4" relative="1" as="geometry">
+            <mxPoint x="29" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-35" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" target="TxC89kSDvtIA5IcEihC5-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="335" y="530" as="sourcePoint" />
+            <mxPoint x="190" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TxC89kSDvtIA5IcEihC5-36" value="Update reservation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TxC89kSDvtIA5IcEihC5-35">
+          <mxGeometry x="0.3324" y="-4" relative="1" as="geometry">
+            <mxPoint x="16" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
