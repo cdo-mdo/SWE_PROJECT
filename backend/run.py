@@ -10,9 +10,9 @@ with app.app_context():
     db.create_all()
 
     # Check if the database is empty and seed data
-    if not Car.query.first():
-        print("Seeding database...")
-        seed_cars(2) # write two cars to mysql
+    # if not Car.query.first():
+    #     print("Seeding database...")
+    #     seed_cars(2) # write two cars to mysql
 
 
 if __name__ == "__main__":
