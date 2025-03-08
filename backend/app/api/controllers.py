@@ -1,5 +1,11 @@
 from flask import jsonify
-from app.api.services import get_available_cars
+from app.api.services import fetch_car_types, get_available_cars
+
+
+def get_car_types():
+    car_types = fetch_car_types()
+    return jsonify({"car_types": car_types})
+
 
 def find_cars(request_data):
     """
@@ -28,8 +34,9 @@ def find_cars(request_data):
             "pickup_location": car.pickup_location,
             "dropoff_location": car.dropoff_location,
             "availability": car.availability,
-            "image_url": car.image_url
-        } for car in cars
+            "image_url": car.image_url,
+        }
+        for car in cars
     ]
 
     response = {
@@ -38,8 +45,8 @@ def find_cars(request_data):
             "start_date": start_date,
             "start_time": start_time,
             "end_date": end_date,
-            "end_time": end_time
-        }
+            "end_time": end_time,
+        },
     }
 
     return jsonify(response)

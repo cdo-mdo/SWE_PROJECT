@@ -1,6 +1,13 @@
 from sqlalchemy import and_
 
-from app.api.models import Car
+from app.api.models import Car, CarType
+
+
+def fetch_car_types():
+    """Fetch all car records from DB"""
+    carTypes = CarType.query.all()
+    return [car.to_dict() for car in carTypes]
+
 
 def get_available_cars(pickup_location, dropoff_location):
     """
@@ -11,13 +18,11 @@ def get_available_cars(pickup_location, dropoff_location):
         and_(
             Car.pickup_location.ilike(pickup_location),
             Car.dropoff_location.ilike(dropoff_location),
-            Car.availability == True
+            Car.availability == True,
         )
     ).all()
 
     return cars
-
-
 
     # Mock response with available cars
     # return [
