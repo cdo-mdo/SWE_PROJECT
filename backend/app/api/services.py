@@ -1,59 +1,52 @@
 from sqlalchemy import and_
 
-from app.api.models import Car, CarType
+from app.api.models import (
+    Car,
+    CarType,
+    Rates,
+    Customer,
+    Employee,
+    Reserve,
+    Rental,
+    Payment,
+)
+
+
+def fetch_cars(pickup_location, dropoff_location):
+    cars = Car.query.all()
+    return [car.to_dict() for car in cars]
 
 
 def fetch_car_types():
-    """Fetch all car records from DB"""
     carTypes = CarType.query.all()
     return [car.to_dict() for car in carTypes]
 
 
-def get_available_cars(pickup_location, dropoff_location):
-    """
-    Fetch available cars for the given pickup and dropoff locations.
-    """
+def fetch_rates():
+    rates = Rates.query.all()
+    return [rate.to_dict() for rate in rates]
 
-    cars = Car.query.filter(
-        and_(
-            Car.pickup_location.ilike(pickup_location),
-            Car.dropoff_location.ilike(dropoff_location),
-            Car.availability == True,
-        )
-    ).all()
 
-    return cars
+def fetch_customers():
+    customers = Customer.query.all()
+    return [customer.to_dict() for customer in customers]
 
-    # Mock response with available cars
-    # return [
-    #     {
-    #         "id": 1,
-    #         "brand": "Toyota",
-    #         "model": "Corolla",
-    #         "year": 2022,
-    #         "type": "Sedan",
-    #         "seats": 5,
-    #         "transmission": "Automatic",
-    #         "fuel_type": "Petrol",
-    #         "price_per_day": 50.00,
-    #         "pickup_location": pickup_location,
-    #         "dropoff_location": dropoff_location,
-    #         "availability": True,
-    #         "image_url": "https://example.com/car1.jpg"
-    #     },
-    #     {
-    #         "id": 2,
-    #         "brand": "Honda",
-    #         "model": "Civic",
-    #         "year": 2021,
-    #         "type": "Sedan",
-    #         "seats": 5,
-    #         "transmission": "Manual",
-    #         "fuel_type": "Diesel",
-    #         "price_per_day": 45.00,
-    #         "pickup_location": pickup_location,
-    #         "dropoff_location": dropoff_location,
-    #         "availability": True,
-    #         "image_url": "https://example.com/car2.jpg"
-    #     }
-    # ]
+
+def fetch_empolyees():
+    empolyees = Employee.query.all()
+    return [empolyee.to_dict() for empolyee in empolyees]
+
+
+def fetch_reserves():
+    reserves = Reserve.query.all()
+    return [reserve.to_dict() for reserve in reserves]
+
+
+def fetch_rentals():
+    rentals = Rental.query.all()
+    return [rentals.to_dict() for rental in rentals]
+
+
+def fetch_payments():
+    payments = Payment.query.all()
+    return [payments.to_dict() for payment in payments]
