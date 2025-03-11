@@ -18,7 +18,7 @@ def get_cars(request_data):
 
 def get_car_types():
     car_types = fetch_car_types()
-    return jsonify({"car_types": car_types})
+    return jsonify({"cartypes": car_types})
 
 
 def get_rates():
