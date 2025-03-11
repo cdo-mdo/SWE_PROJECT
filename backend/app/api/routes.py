@@ -19,7 +19,7 @@ def cars():
     return get_cars(request_data)
 
 
-@api_bp.route("/car/types", methods=["GET"])
+@api_bp.route("/cartypes", methods=["GET"])
 def car_types():
     return get_car_types()
 
@@ -44,7 +44,7 @@ def reserves():
     return get_reserves()
 
 
-@api_bp.route("/reserves", methods=["GET"])
+@api_bp.route("/rentals", methods=["GET"])
 def rentals():
     return get_rentals()
 
