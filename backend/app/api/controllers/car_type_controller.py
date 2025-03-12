@@ -1,5 +1,5 @@
 from flask import jsonify
-from app.api.services.car_type import (
+from app.api.services.car_type_service import (
     fetch_car_types,
     add_car_type,
     edit_car_type,

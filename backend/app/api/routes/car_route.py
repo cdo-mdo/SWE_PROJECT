@@ -1,5 +1,10 @@
 from flask import Blueprint, request
-from app.api.controllers.car import get_cars, create_car, update_car, delete_car
+from app.api.controllers.car_controller import (
+    get_cars,
+    create_car,
+    update_car,
+    delete_car,
+)
 
 car_bp = Blueprint("cars", __name__)
 

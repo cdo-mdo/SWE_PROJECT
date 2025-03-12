@@ -1,5 +1,5 @@
 from flask import jsonify
-from app.api.services.car import fetch_cars, add_car, edit_car, remove_car
+from app.api.services.car_service import fetch_cars, add_car, edit_car, remove_car
 
 
 def get_cars(car_id=None):

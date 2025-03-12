@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.api.controllers.car_type import (
+from app.api.controllers.car_type_controller import (
     get_car_types,
     create_car_type,
     update_car_type,
