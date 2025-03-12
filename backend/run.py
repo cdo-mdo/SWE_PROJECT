@@ -1,7 +1,8 @@
 from app.app import create_app  # Import create_app from app.py
 from app.extensions.database import db
-from app.api.models import Car
-from seed import seed_cars
+
+from app.api.models.car import Car
+from seed import seed_data
 
 app = create_app()  # Create an instance of the Flask app
 
@@ -12,7 +13,7 @@ with app.app_context():
     # Check if the database is empty and seed data
     # if not Car.query.first():
     #     print("Seeding database...")
-    #     seed_cars(2) # write two cars to mysql
+    #     seed_cars(2)  # write two cars to mysql
 
 
 if __name__ == "__main__":

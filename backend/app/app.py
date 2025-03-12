@@ -1,6 +1,7 @@
 from flask import Flask
 from app.extensions.database import db
 from app.config.config import Config
+
 from app.api.routes import api_bp
 
 

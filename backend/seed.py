@@ -2,12 +2,13 @@ import random
 from faker import Faker
 from app.app import create_app
 from app.extensions.database import db
-from app.api.models import Car, CarType
+from app.api.models.car import Car
+from app.api.models.car_type import CarType
 
 fake = Faker()
 
 
-def seed_cars(n=2):
+def seed_data(n=2):
     """Seed the database with fake car data."""
     app = create_app()
     with app.app_context():
@@ -19,9 +20,18 @@ def seed_cars(n=2):
             )
             db.session.add(car_types)
 
+        for _ in range(n):
+            cars = Car(
+                license_plate=random.choice(["LDM123", "URT123", "BRS123", "KSM123"]),
+                mileage=random.choice([5, 10]),
+                car_type_id=random.choice([1, 2]),
+            )
+
+            db.session.add(cars)
+
         db.session.commit()
-        print(f"✅ {n} fake cars added to the database!")
+        print(f"✅ {n} fake data added to the database!")
 
 
 if __name__ == "__main__":
-    seed_cars(1)  # Insert 1 fake cars
+    seed_data(1)  # Insert 1 fake cars
