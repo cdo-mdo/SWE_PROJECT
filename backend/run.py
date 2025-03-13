@@ -17,4 +17,4 @@ with app.app_context():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)  # Run the Flask app
+    app.run(port="8081", debug=True)  # Run the Flask app
