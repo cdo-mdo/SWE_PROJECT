@@ -1,8 +1,12 @@
 from flask import Flask
 from app.extensions.database import db
 from app.config.config import Config
+from flask_jwt_extended import JWTManager
 
 from app.api.routes import api_bp
+
+
+jwt = JWTManager()
 
 
 def create_app():
@@ -11,6 +15,7 @@ def create_app():
 
     # Initialize database
     db.init_app(app)
+    jwt.init_app(app)
 
     # Register Blueprints
     app.register_blueprint(api_bp, url_prefix="/api")

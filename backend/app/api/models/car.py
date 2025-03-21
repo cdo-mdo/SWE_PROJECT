@@ -7,7 +7,9 @@ class Car(db.Model):
     mileage = db.Column(db.Integer)
     status = db.Column(db.String(20), default="AVAILABLE")
     car_type_id = db.Column(db.Integer, db.ForeignKey("car_type.id"))
+    rate_id = db.Column(db.Integer, db.ForeignKey("rate.id"))
     car_type = db.relationship("CarType", backref="cars")
+    rate = db.relationship("Rate", backref="cars")
 
     def to_dict(self):
         return {
@@ -16,4 +18,5 @@ class Car(db.Model):
             "mileage": self.mileage,
             "status": self.status,
             "car_type_id": self.car_type_id,
+            "rate_id": self.rate_id,
         }

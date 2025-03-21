@@ -14,3 +14,19 @@ class Person(db.Model):
     city = db.Column(db.String(50))
     state = db.Column(db.String(50))
     zip = db.Column(db.String(10))
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "dob": self.dob,
+            "ssn": self.ssn,
+            "passport": self.passport,
+            "phone": self.phone,
+            "email": self.email,
+            "street": self.street,
+            "city": self.city,
+            "state": self.state,
+            "zip": self.zip,
+        }

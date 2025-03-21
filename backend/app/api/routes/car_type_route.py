@@ -1,4 +1,5 @@
 from flask import Blueprint, request
+from app.api.utils.check_roles import role_required
 from app.api.controllers.car_type_controller import (
     get_car_types,
     create_car_type,
@@ -20,17 +21,20 @@ def get_car_type(car_type_id):
 
 
 @cartype_bp.route("/", methods=["POST"])
+@role_required("ADMIN")
 def add_car_type():
     request_data = request.get_json()
     return create_car_type(request_data)
 
 
 @cartype_bp.route("/<int:car_type_id>", methods=["PUT"])
+@role_required("ADMIN")
 def modify_car_type(car_type_id):
     request_data = request.get_json()
     return update_car_type(car_type_id, request_data)
 
 
 @cartype_bp.route("/<int:car_type_id>", methods=["DELETE"])
+@role_required("ADMIN")
 def remove_car_type(car_type_id):
     return delete_car_type(car_type_id)

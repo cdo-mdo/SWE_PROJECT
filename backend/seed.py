@@ -5,6 +5,7 @@ from datetime import timedelta
 from app.app import create_app
 from app.extensions.database import db
 from app.api.models.car import Car
+from app.api.models.rate import Rate
 from app.api.models.car_type import CarType
 from app.api.models.person import Person
 from app.api.models.account import Account, ROLE
@@ -29,13 +30,22 @@ def seed_data(n=2):
             db.session.add(car_types)
         db.session.commit()
 
+        for _ in range(n):
+            car_rate = Rate(
+                price=random.choice([8, 30]),
+            )
+            db.session.add(car_rate)
+        db.session.commit()
+
         car_types = [car_type.id for car_type in CarType.query.all()]
+        car_rates = [car_rate.id for car_rate in Rate.query.all()]
         for _ in range(n):
             cars = Car(
                 license_plate=fake.license_plate(),
-                mileage=random.choice([5, 10]),
+                mileage=random.choice([5, 1000]),
                 status=random.choice(["AVAILABLE", "RENTED", "MAINTENANCE"]),
                 car_type_id=random.choice(car_types),
+                rate_id=random.choice(car_rates),
             )
 
             db.session.add(cars)
@@ -115,4 +125,4 @@ def seed_data(n=2):
 
 
 if __name__ == "__main__":
-    seed_data(1)  # Insert 1 fake cars
+    seed_data(10)  # Insert 1 fake cars
