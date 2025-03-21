@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.api.utils.check_roles import role_required
+from app.extensions.jwt import role_required
 from app.api.controllers.car_controller import (
     get_cars,
     create_car,

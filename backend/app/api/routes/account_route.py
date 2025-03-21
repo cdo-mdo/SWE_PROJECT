@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from app.api.utils.check_roles import role_required
+from app.extensions.jwt import role_required
 from app.api.controllers.account_controller import (
     login_account,
     register_account,

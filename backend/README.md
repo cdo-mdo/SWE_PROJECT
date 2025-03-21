@@ -26,13 +26,11 @@ python3 run.py
 /backend/
 │── /app/                  # Main application package
 │   │── /api/              # API-related modules
-│   │   │── __init__.py
-│   │   │── routes.py      # Route definitions
-│   │   │── controllers.py # Business logic
-│   │   │── models.py      # Database models (SQLAlchemy)
-│   │   │── schemas.py     # Request/response validation (Marshmallow)
-│   │   │── services.py    # Business logic and services
-│   │   │── utils.py       # Utility/helper functions
+│   │   │── routes         # Route definitions
+│   │   │── controllers    # Business logic
+│   │   │── models         # Database models (SQLAlchemy)
+│   │   │── services       # Business logic and services
+│   │   │── utils          # Utility/helper functions
 │   │
 │   │── /config/           # Configuration files
 │   │   │── __init__.py
