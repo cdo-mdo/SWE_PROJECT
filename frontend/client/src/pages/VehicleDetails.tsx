@@ -23,10 +23,10 @@ export default function VehicleDetails() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <img
-            src="https://www.hertz.com/content/dam/hertz/global/logos/hertz-logo.svg"
-            alt="Hertz Logo"
-            className="h-8"
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv8VCDlM64uFv7274Mn3UjHpqXRGtIwAWokg&s"
+            alt="Rent logo"
+            className="h-12"
           />
         </div>
       </header>
