@@ -65,11 +65,11 @@ python3 run.py
 ```
 
 ## An example from client registration to the rental process
-### client register
-
-
-### client login
-
-### client show cars
-
+### Client register
+![client register](https://github.com/cdo-mdo/SWE_PROJECT/blob/main/backend/screenshots/1.register.png?raw=true)
+### Client login
+![client login](https://github.com/cdo-mdo/SWE_PROJECT/blob/main/backend/screenshots/2.login.png?raw=true)
+### Client show cars
+![show cars](https://github.com/cdo-mdo/SWE_PROJECT/blob/main/backend/screenshots/3.get_cars.png?raw=true)
 ### After selecting a car, the client submits their details.
+![rental](https://github.com/cdo-mdo/SWE_PROJECT/blob/main/backend/screenshots/4.create_rental.png?raw=true)
