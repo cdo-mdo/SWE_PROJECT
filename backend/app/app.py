@@ -1,6 +1,7 @@
 from flask import Flask
 from app.extensions.database import db
 from app.config.config import Config
+from flask_cors import CORS
 
 from app.api.routes import api_bp
 
@@ -8,6 +9,9 @@ from app.api.routes import api_bp
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+    
+    # Enable CORS
+    CORS(app, resources={r"/api/*": {"origins": "http://localhost:5000"}})
 
     # Initialize database
     db.init_app(app)

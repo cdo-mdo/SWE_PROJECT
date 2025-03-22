@@ -1,11 +1,22 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { VehicleCategory } from "@shared/schema";
+import { Car } from "@/lib/api";
 import { Users, Briefcase, GaugeCircle } from "lucide-react";
 import { useLocation } from "wouter";
 
-interface VehicleCardProps {
-  vehicle: VehicleCategory;
+export interface VehicleCardProps {
+  vehicle: {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    capacity: number;
+    luggage: number;
+    transmission: string;
+    image: string;
+    status: string;
+    mileage: number;
+  };
 }
 
 export function VehicleCard({ vehicle }: VehicleCardProps) {
@@ -31,6 +42,17 @@ export function VehicleCard({ vehicle }: VehicleCardProps) {
         </div>
       </CardHeader>
       <CardContent>
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="flex items-center gap-2">
+            <GaugeCircle className="h-4 w-4" />
+            <span className="text-sm">{vehicle.mileage} km</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${vehicle.status === 'available' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+              {vehicle.status}
+            </span>
+          </div>
+        </div>
         <div className="grid grid-cols-3 gap-4 mb-4">
           <div className="flex items-center gap-2">
             <Users className="h-4 w-4" />

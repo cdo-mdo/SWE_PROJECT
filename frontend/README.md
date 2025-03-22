@@ -1,6 +1,6 @@
 # Hertz Car Rental Clone
 
-A React-based clone of the Hertz car rental website UI. This project implements the core booking flow and vehicle browsing experience using React, Tailwind CSS, and ShadcN UI components.
+A React-based make of car rental website UI. This project implements the core booking flow and vehicle browsing experience using React, Tailwind CSS, and ShadcN UI components.
 
 ## Features
 

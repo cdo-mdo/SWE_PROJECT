@@ -26,7 +26,8 @@ export default function VehicleDetails() {
         <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv8VCDlM64uFv7274Mn3UjHpqXRGtIwAWokg&s"
             alt="Rent logo"
-            className="h-12"
+            className="h-12 cursor-pointer"
+            onClick={() => window.location.href = '/'}
           />
         </div>
       </header>

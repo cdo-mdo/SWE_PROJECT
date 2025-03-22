@@ -30,6 +30,16 @@ export const searchFormSchema = z.object({
   dropoffTime: z.string()
 });
 
+export const carSchema = z.object({
+  id: z.number(),
+  car_type_id: z.string(),
+  license_plate: z.string(),
+  mileage: z.number(),
+  status: z.enum(["available", "maintenance", "rented"]),
+  image: z.string().optional()
+});
+
+export type Car = z.infer<typeof carSchema>;
 export type Location = z.infer<typeof locationSchema>;
 export type VehicleCategory = z.infer<typeof vehicleCategorySchema>;
 export type SearchFormData = z.infer<typeof searchFormSchema>;
