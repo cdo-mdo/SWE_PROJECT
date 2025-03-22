@@ -10,7 +10,7 @@ def role_required(required_role):
             verify_jwt_in_request()
             # user = get_jwt_identity()
             claims = get_jwt()
-            if claims["role"] != required_role:
+            if claims["role"] not in required_role:
                 return jsonify(msg="Access forbidden: Insufficient role"), 403
             return fn(*args, **kwargs)
 

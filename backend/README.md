@@ -63,3 +63,13 @@ python3 run.py
 │── seed.py                # Add data
 │── README.md              # Project documentation
 ```
+
+## An example from client registration to the rental process
+### client register
+
+
+### client login
+
+### client show cars
+
+### After selecting a car, the client submits their details.

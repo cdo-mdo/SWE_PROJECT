@@ -19,4 +19,6 @@ class Car(db.Model):
             "status": self.status,
             "car_type_id": self.car_type_id,
             "rate_id": self.rate_id,
+            "rate": self.rate.to_dict() if self.rate else None,
+            "car_type": self.car_type.to_dict() if self.car_type else None,
         }

@@ -20,3 +20,20 @@ class Rental(db.Model):
     rental_status = db.Column(db.Enum(RENTAL_STATUS), nullable=False)
     car_id = db.Column(db.Integer, db.ForeignKey("car.id"))
     account_id = db.Column(db.Integer, db.ForeignKey("account.id"))
+    car = db.relationship("Car", backref="accounts")
+    account = db.relationship("Account", backref="accounts")
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "start_date": self.start_time,
+            "end_date": self.end_time,
+            "pickup_location": self.pickup_location,
+            "dropoff_location": self.dropoff_location,
+            "rental_agreement": self.rental_agreement,
+            "rental_status": self.rental_status.value,
+            "car_id": self.car_id,
+            "account_id": self.account_id,
+            "car": self.car.to_dict() if self.car else None,
+            "account": self.account.to_dict() if self.account else None,
+        }
