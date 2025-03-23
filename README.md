@@ -1,3 +1,3 @@
 # SWE_PROJECT
 Project in the course Software Engineering
-@yorda640
+SWE project
